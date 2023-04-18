@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Realtime Chat Application
 
-## Getting Started
+Simple overview of use/purpose.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+An in-depth paragraph about your project and overview of use.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies and Dependencies used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* Next.js
+* Typescript
+* TailwindCSS
+* Redis
+* Upstash
+* class-variance-authority
+* lucide-react
+* clsx
+* tailwind-merge
+* next-auth
+* @next-auth/upstash-redis-adapter
+* @upstash/redis
+* react-hot-toast
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+## What did I Learned
+* class-variance-authority: Its a javascript library used to create variant used to create Cascading Style Sheet (CSS) variants more efficiently.CVA can be used to give more control over stylesheet output.
+* lucide-react: I didn't know this library that is awesome to use icons in your project. It is a beautiful and consistent icon toolkit made by the community.
+* Used lib folder for the first time. This folder is for preparing some libraries to be used in the app.
+* I used tailwind merge and clsx to reuse some components and give them the possibility of having their own styles and to conditionally render those styles.
+* This was my first time using Redis for my database. I applied this in-memory data sctructured store used as a database with the help of Upstash to manage redis in a more simple way
+* Used react-hot-toast to show the user notifications
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Authors
 
-## Learn More
+Contributors names and contact info
 
-To learn more about Next.js, take a look at the following resources:
+ex. Dominique Pizzie  
+ex. [@DomPizzie](https://twitter.com/dompizzie)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
-## Deploy on Vercel
+## Acknowledgments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Inspiration, code snippets, etc.
+* [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+* [dbader](https://github.com/dbader/readme-template)
+* [zenorocha](https://gist.github.com/zenorocha/4526327)
+* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
