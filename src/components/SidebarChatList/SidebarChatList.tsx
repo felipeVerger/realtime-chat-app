@@ -1,4 +1,4 @@
-'use-client'
+'use client'
 
 import { pusherClient } from '@/lib/pusher'
 import { chatHrefConstructor, toPusherKey } from '@/lib/utils'
@@ -23,14 +23,15 @@ const SidebarChatList: FC<SidebarChatListProps> = ({ friends, sessionId }) => {
   const router = useRouter();
   const pathname = usePathname();
   const [unseenMessages, setUnseenMessages] = useState<Message[]>([]);
+  const [activeChats, setActiveChats] = useState<User[]>(friends);
 
   // To handle realtime notifications
   useEffect(() => {
     pusherClient.subscribe(toPusherKey(`user:${sessionId}:chats`));
     pusherClient.subscribe(toPusherKey(`user:${sessionId}:friends`));
 
-    const newFriendHandler = () => {
-      router.refresh();
+    const newFriendHandler = (newFriend: User) => {
+      setActiveChats((prev) => [...prev, newFriend])
     }
 
     const chatHandler = (message: ExtendedMessage) => {
@@ -77,7 +78,7 @@ const SidebarChatList: FC<SidebarChatListProps> = ({ friends, sessionId }) => {
         <p className='text-xs ml-2 text-slate-400'>There are no chats yet, go and add a friend to start chatting!</p>
       ) : (
         <>
-          {friends.sort().map((friend) => {
+          {activeChats.sort().map((friend) => {
               const unseenMessagesCount = unseenMessages.filter((unseenMsg) => {
                 return unseenMsg.senderId === friend.id
               }).length
