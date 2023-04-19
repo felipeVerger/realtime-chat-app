@@ -1,3 +1,4 @@
+import { tr } from 'date-fns/locale';
 import { getToken } from 'next-auth/jwt';
 import { withAuth } from 'next-auth/middleware';
 import { NextResponse } from 'next/server';
@@ -20,6 +21,7 @@ export default withAuth(
             }
             return NextResponse.next();
         }
+
 
         // Check if the user is not logged in and accessing sensitive route to redirect him to the login page
         if (!isAuth && isAccessingSensitiveRoute) {
